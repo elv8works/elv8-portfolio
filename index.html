@@ -662,35 +662,36 @@
             <p>We are ready to understand your needs and build solutions that work for you.</p>
           </div>
 
-          <form action="forms/contact.php" method="post" class="php-email-form">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-              </div>
-              <div class="col-md-6 mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
-              </div>
-            </div>
+  <form action="https://formspree.io/f/mnnbelaj" method="POST" class="php-email-form">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+        </div>
+      </div>
+    
+      <div class="mb-3">
+        <input type="text" class="form-control" name="subject" placeholder="Contact Number" required>
+      </div>
+    
+      <div class="mb-4">
+        <textarea class="form-control" name="message" rows="4" placeholder="Tell us more about your project..." required></textarea>
+      </div>
+    
+      <div class="my-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+      </div>
+    
+      <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <i class="bi bi-send-fill"></i>
+      </button>
+</form>
 
-            <div class="mb-3">
-              <input type="text" class="form-control" name="subject" placeholder="Contact Number" required="">
-            </div>
-
-            <div class="mb-4">
-              <textarea class="form-control" name="message" rows="4" placeholder="Tell us more about your project..." required=""></textarea>
-            </div>
-
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-
-            <button type="submit" class="submit-btn">
-              <span>Send Message</span>
-              <i class="bi bi-send-fill"></i>
-            </button>
-          </form>
         </div>
       </div>
 

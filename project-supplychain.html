@@ -1,73 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supply Chain Management Project | elv8</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Supply Chain Management - Project Detail</title>
+  <meta content="Project details for Supply Chain Management System built with Google Sheets and Apps Script." name="description">
+  <meta content="Supply Chain, Google Sheets, Apps Script, Automation, Portfolio" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- ======= Project Details Section ======= -->
-  <section class="project-details container py-5" data-aos="fade-up">
-    <div class="section-title text-center mb-5">
-      <h2>Supply Chain Management</h2>
-      <p>A smart solution to track and manage gold inventory with automation.</p>
-    </div>
-
-    <div class="row gy-4">
-      <!-- Problem Statement -->
-      <div class="col-lg-12">
-        <h4>Problem Statement</h4>
-        <p>
-          Businesses in the gold sector faced difficulty in tracking real-time inventory, payments, and returns. Manual processes often caused delays and errors.
-        </p>
-      </div>
-
-      <!-- Steps Taken -->
-      <div class="col-lg-12">
-        <h4>Steps Taken</h4>
-        <ul>
-          <li>Analyzed existing workflows and identified inefficiencies.</li>
-          <li>Designed a centralized Google Sheets system.</li>
-          <li>Implemented automation using Apps Script.</li>
-          <li>Built real-time reporting dashboards.</li>
-        </ul>
-      </div>
-
-      <!-- Tools Used -->
-      <div class="col-lg-12">
-        <h4>Tools Used</h4>
-        <div class="d-flex gap-2 flex-wrap">
-          <span class="tech-badge">Google Sheets</span>
-          <span class="tech-badge">Apps Script</span>
-          <span class="tech-badge">Automation</span>
-        </div>
-      </div>
-
-      <!-- Outcome -->
-      <div class="col-lg-12">
-        <h4>Outcome</h4>
-        <p>
-          A live automated system reduced manual effort by 70%, improved accuracy, and enabled businesses to make faster, data-driven decisions.
-        </p>
-      </div>
-    </div>
-
-    <!-- Back to Portfolio Button -->
-    <div class="text-center mt-5">
-      <a href="index.html#portfolio" class="btn btn-primary">
-        <i class="bi bi-arrow-left"></i> Back to Portfolio
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <h1 class="sitename">Elv8 Works</h1>
       </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
     </div>
-  </section>
-  <!-- End Project Details Section -->
+  </header><!-- End Header -->
 
+  <main id="main" class="mt-5 pt-5">
+
+    <!-- ======= Project Detail Section ======= -->
+    <section id="project-detail" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Section Title -->
+        <div class="section-title">
+          <h2>Project Details</h2>
+          <p>Supply Chain Management System</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <!-- Left Column: Image -->
+          <div class="col-lg-6">
+            <div class="portfolio-image">
+              <img src="assets/img/portfolio/goldtracking.png" alt="Supply Chain Management Project" class="img-fluid rounded shadow">
+            </div>
+          </div>
+
+          <!-- Right Column: Info -->
+          <div class="col-lg-6">
+            <div class="portfolio-info card p-4 shadow-sm">
+              <h3>Project Overview</h3>
+              <ul>
+                <li><strong>Problem Statement:</strong> Manual tracking of gold inventory, payments, and returns led to errors, delays, and lack of transparency.</li>
+                <li><strong>Steps Taken:</strong> Designed an automated system in Google Sheets integrated with Apps Script, creating live dashboards and automated notifications.</li>
+                <li><strong>Tools Used:</strong> Google Sheets, Apps Script, Automation APIs</li>
+                <li><strong>Outcome:</strong> Reduced manual effort by 70%, improved real-time visibility, and streamlined end-to-end supply chain tracking.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="row mt-4">
+          <div class="col">
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-primary">Google Sheets</span>
+              <span class="badge bg-success">Apps Script</span>
+              <span class="badge bg-warning text-dark">Automation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Project Detail Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>elv8s</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        elv8
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
-</html>
 
+</html>

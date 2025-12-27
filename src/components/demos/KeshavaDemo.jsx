@@ -137,25 +137,25 @@ export default function KeshavaDemo() {
       </div>
 
       {/* Bottom Navigation - Only visible on Mobile/Medium, replaces Sidebar */}
-      <nav className="fixed bottom-0 left-0 right-0 md:absolute bg-[#0d1117] border-t border-zinc-800 px-2 py-3 flex justify-around items-center z-10 md:rounded-b-2xl">
-        {[
-          { id: 'dashboard', icon: <LayoutDashboard size={20} />, label: 'Home' },
-          { id: 'gold-ops', icon: <Scale size={20} />, label: 'Ops' },
-          { id: 'estimation', icon: <FileText size={20} />, label: 'Estim' },
-          { id: 'investments', icon: <Landmark size={20} />, label: 'Invest' }
-        ].map((item) => (
-          <button
-            key={item.id}
-            onClick={() => setActiveSubTab(item.id)}
-            className={`flex flex-col items-center gap-1 transition-all ${
-              activeSubTab === item.id ? 'text-blue-500 scale-110' : 'text-zinc-600'
-            }`}
-          >
-            {item.icon}
-            <span className="text-[8px] font-bold uppercase tracking-tighter">{item.label}</span>
-          </button>
-        ))}
-      </nav>
+      <nav className="absolute bottom-0 left-0 right-0 bg-[#0d1117] border-t border-zinc-800 px-2 py-3 flex justify-around items-center z-10 md:rounded-b-2xl">
+    {[
+      { id: 'dashboard', icon: <LayoutDashboard size={20} />, label: 'Home' },
+      { id: 'gold-ops', icon: <Scale size={20} />, label: 'Ops' },
+      { id: 'estimation', icon: <FileText size={20} />, label: 'Estim' },
+      { id: 'investments', icon: <Landmark size={20} />, label: 'Invest' }
+    ].map((item) => (
+      <button
+        key={item.id}
+        onClick={() => setActiveSubTab(item.id)}
+        className={`flex flex-col items-center gap-1 transition-all ${
+          activeSubTab === item.id ? 'text-blue-500 scale-110' : 'text-zinc-600'
+        }`}
+      >
+        {item.icon}
+        <span className="text-[8px] font-bold uppercase tracking-tighter">{item.label}</span>
+      </button>
+    ))}
+  </nav>
     </div>
   );
 }

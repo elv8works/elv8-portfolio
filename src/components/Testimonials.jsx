@@ -17,7 +17,16 @@ const testimonials = [
     text: "We express our sincere appreciation for the 'Vision Tiles Warehouse Management Analysis'. Your professional approach and clear analysis have been invaluable in helping us chart a path toward optimizing our operations.",
     highlight: "Excellent Guidance",
     color: "from-purple-500/10 to-transparent"
-  }
+  },
+  {
+  name: "Shruthi",
+  role: "Owner, Shree Sadguru Creations",
+  company: "Shree Sadguru Creations",
+  text: "Implementing the custom CRM transformed how we run our boutique. Manual order tracking and follow-ups were fully automated, reducing daily operational effort by nearly 60%. WhatsApp API integration alone increased repeat customer engagement by over 45%, while order confirmation and campaign messages reached customers instantly. Overall, our monthly sales conversions improved by around 30% within the first three months.",
+  highlight: "Complete Boutique Automation with Measurable Growth",
+  color: "from-emerald-500/10 to-transparent"
+}
+
 ];
 
 export default function Testimonials() {
@@ -60,11 +69,11 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                <h4 className="text-xl font-bold text-white mb-4 italic">
+                <h4 className="text-xl font-bold text-yellow-400 mb-4 italic">
                   "{t.highlight}"
                 </h4>
                 
-                <p className="text-zinc-400 leading-relaxed mb-8 text-lg">
+                <p className="text-zinc-400 leading-relaxed mb-8 text-md text-justify">
                   {t.text}
                 </p>
               </div>

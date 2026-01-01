@@ -9,7 +9,7 @@ export default function KeshavaDemo() {
   const [weight, setWeight] = useState('');
   const [rate, setRate] = useState('7250');
 
-  const LIVE_DEMO_URL = "https://your-crm-dev-link.com"; 
+  const LIVE_DEMO_URL = "https://keshava-test.web.app"; 
 
   const renderContent = () => {
     switch (activeSubTab) {

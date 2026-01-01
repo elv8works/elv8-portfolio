@@ -1,81 +1,109 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Track scroll position to adjust opacity
+  /* ---------------- Scroll Detection ---------------- */
   useEffect(() => {
     const handleScroll = () => {
-      const position = window.scrollY;
-      // Calculate opacity: starts at 1, fades toward 0.2 as you scroll 300px
-      const newOpacity = Math.max(0.2, 1 - position / 400);
-      setScrolled(newOpacity);
+      setScrolled(window.scrollY > 120);
+      if (window.scrollY <= 120) setMenuOpen(false);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Work', href: '#work' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Work", href: "#work" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
+    { name: "Testimonials", href: "#testimonials" }
   ];
 
   return (
-    <nav 
-      className="fixed top-0 w-full z-[100] transition-all duration-300"
-      style={{ opacity: scrolled || 1 }}
-    >
-      <div className="flex justify-between items-center px-6 md:px-10 py-6 mix-blend-difference text-white">
-        <span className="font-black text-2xl tracking-tighter">elv8.works</span>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-          {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="hover:text-blue-500 transition-colors">
-              {link.name}
-            </a>
-          ))}
+    <nav className="fixed top-0 w-full z-[100]">
+      <motion.div
+        animate={{
+          height: scrolled ? 72 : 96,
+          backgroundColor: scrolled
+            ? "rgba(9,9,11,0.9)"
+            : "rgba(0,0,0,0)",
+          backdropFilter: scrolled ? "blur(14px)" : "blur(0px)",
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className="flex items-center justify-between px-6 md:px-10 border-b border-white/5"
+      >
+        {/* Logo */}
+        <div className="flex items-center gap-3 text-white">
+          <img src="/elv8.png" alt="elv8.works" className="h-20 w-auto" />
+          <span className="font-black text-xl tracking-tight">
+            elv8.works
+          </span>
         </div>
 
-        {/* Mobile Toggle Button */}
-        <button 
-          className="md:hidden p-2"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-0 left-0 w-full h-screen bg-zinc-950 flex flex-col items-center justify-center space-y-8 text-2xl font-bold uppercase tracking-widest md:hidden"
-          >
+        {/* Full Menu — Only at Top */}
+        {!scrolled && (
+          <div className="hidden lg:flex gap-10 text-sm uppercase tracking-widest text-white">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-500"
+              <a
+                key={link.name}
+                href={link.href}
+                className="hover:text-blue-500 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6"
+          </div>
+        )}
+
+        {/* Hamburger — Only After Scroll */}
+        {scrolled && (
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="p-2 text-white hover:text-blue-500 transition"
+          >
+            <Menu size={28} />
+          </button>
+        )}
+      </motion.div>
+
+      {/* Fullscreen Overlay Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-zinc-950 z-[200] flex flex-col items-center justify-center"
+          >
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-6 right-6 text-white"
             >
               <X size={32} />
             </button>
+
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ staggerChildren: 0.1 }}
+              className="flex flex-col items-center gap-10 text-3xl font-bold uppercase tracking-widest text-white"
+            >
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

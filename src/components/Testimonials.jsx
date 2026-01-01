@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 px-6 bg-zinc-950 relative overflow-hidden">
+    <section className="py-24 px-6 bg-zinc-950 relative overflow-hidden" id="testimonials">
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[100px] -z-10" />
       

@@ -83,7 +83,7 @@ export default function MarketingDemo() {
                 <BarChart className="text-green-500 mb-2" size={32} />
                 <h3 className="text-white font-bold text-sm">Campaign Success</h3>
                 <p className="text-[10px] text-zinc-500 mt-2">100% Delivery Rate</p>
-                <button onClick={() => setShowNotification(false)} className="mt-4 text-[9px] font-bold text-blue-500 uppercase tracking-widest">Reset</button>
+                <button onClick={() => setShowNotification(false)} className="mt-4 text-[9px] font-bold text-yellow-500 uppercase tracking-widest">Reset</button>
               </motion.div>
             )}
           </AnimatePresence>

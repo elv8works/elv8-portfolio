@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Jewellers CRM",
     category: "Software Development",
-    icon: <Database className="text-blue-500" />,
+    icon: <Database className="text-yellow-500" />,
     description: "Custom-built enterprise CRM for inventory and luxury client management.",
     tech: ["React", "Firebase", "Tailwind", "ML"]
   },
@@ -99,10 +99,10 @@ export default function Projects() {
               </div>
 
               <div className="flex-grow">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 mb-2">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-yellow-500 mb-2">
                   {project.category}
                 </p>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-50 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-yellow-50 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-zinc-400 text-sm leading-relaxed">

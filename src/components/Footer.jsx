@@ -23,13 +23,13 @@ export default function Footer() {
           >
             <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-tight">
               READY TO <br /> 
-              <span className="text-blue-500 italic">ELEVATE?</span>
+              <span className="text-yellow-500 italic">ELEVATE?</span>
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-6 mt-10">
               <a 
                 href="mailto:elv8.works@gmail.com" 
-                className="group inline-flex items-center gap-3 text-2xl font-bold text-white border-b-2 border-blue-600 pb-2 hover:text-blue-500 transition-all"
+                className="group inline-flex items-center gap-3 text-2xl font-bold text-white border-b-2 border-yellow-600 pb-2 hover:text-yellow-500 transition-all"
               >
                 Get in touch <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </a>

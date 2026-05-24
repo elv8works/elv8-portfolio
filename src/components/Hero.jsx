@@ -10,7 +10,7 @@ export default function Hero() {
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-blue-500 font-mono tracking-widest text-md"
+          className="text-yellow-500 font-mono tracking-widest text-md"
         >
           elv8.works — Consultancy
         </motion.span>

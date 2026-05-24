@@ -16,7 +16,7 @@ export default function KeshavaDemo() {
       case 'gold-ops':
         return (
           <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4">
-            <h4 className="text-xs font-bold text-blue-400 uppercase tracking-widest">Assign Work</h4>
+            <h4 className="text-xs font-bold text-yellow-400 uppercase tracking-widest">Assign Work</h4>
             <div className="grid grid-cols-1 gap-3">
               <input 
                 type="text" placeholder="Goldsmith Name" 
@@ -27,7 +27,7 @@ export default function KeshavaDemo() {
                 value={weight} onChange={(e) => setWeight(e.target.value)}
                 className="bg-zinc-950 border border-zinc-800 p-3 rounded-xl text-sm text-white outline-none focus:ring-1 focus:ring-blue-500" 
               />
-              <button className="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold text-sm text-white transition-all active:scale-95">
+              <button className="w-full bg-yellow-600 hover:bg-blue-500 py-3 rounded-xl font-bold text-sm text-white transition-all active:scale-95">
                 Issue Gold
               </button>
             </div>
@@ -40,7 +40,7 @@ export default function KeshavaDemo() {
           <div className="flex flex-col gap-6 animate-in fade-in">
             <div className="space-y-4">
               <div className="p-4 bg-blue-600/10 rounded-2xl border border-blue-500/20 text-center">
-                <p className="text-[10px] text-blue-400 font-bold uppercase mb-1">Total Estimate</p>
+                <p className="text-[10px] text-yellow-400 font-bold uppercase mb-1">Total Estimate</p>
                 <p className="text-3xl font-black text-white">₹{total}</p>
               </div>
               <div className="grid grid-cols-1 gap-2">
@@ -148,7 +148,7 @@ export default function KeshavaDemo() {
         key={item.id}
         onClick={() => setActiveSubTab(item.id)}
         className={`flex flex-col items-center gap-1 transition-all ${
-          activeSubTab === item.id ? 'text-blue-500 scale-110' : 'text-zinc-600'
+          activeSubTab === item.id ? 'text-yellow-500 scale-110' : 'text-zinc-600'
         }`}
       >
         {item.icon}

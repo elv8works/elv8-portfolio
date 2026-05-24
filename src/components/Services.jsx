@@ -42,9 +42,9 @@ export default function Services() {
             whileInView={{ opacity: 1, x: 0 }}
             className="text-4xl md:text-5xl font-bold text-white"
           >
-            Our <span className="text-blue-500">Services</span>
+            Our <span className="text-yellow-500">Services</span>
           </motion.h2>
-          <div className="h-1 w-20 bg-blue-600 mt-4 rounded-full" />
+          <div className="h-1 w-20 bg-yellow-600 mt-4 rounded-full" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

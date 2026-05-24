@@ -11,7 +11,7 @@ const reasons = [
   {
     title: "Measurable Growth",
     desc: "We focus on the numbers that matter. Our projects deliver real improvements in performance, business value, and return on investment.",
-    icon: <BarChart className="text-blue-400" />,
+    icon: <BarChart className="text-yellow-400" />,
     stats: "ROI Focused"
   },
   {
@@ -37,14 +37,14 @@ export default function WhyChooseUs() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Why Businesses <br /> 
-              <span className="text-blue-500">Choose elv8</span>
+              <span className="text-yellow-500">Choose elv8</span>
             </h2>
             <p className="mt-6 text-zinc-400 text-lg">
               We deliver meaningful results through tailored solutions, transparency, and a partnership mindset.
             </p>
             
             <div className="mt-10 p-6 rounded-2xl bg-blue-600/10 border border-blue-500/20">
-              <p className="text-blue-400 font-semibold flex items-center gap-2">
+              <p className="text-yellow-400 font-semibold flex items-center gap-2">
                 Elevating your digital presence <ArrowUpRight size={20}/>
               </p>
             </div>
@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
                 transition={{ delay: index * 0.1 }}
                 className="group p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900 transition-all flex flex-col md:flex-row gap-6 items-start"
               >
-                <div className="p-4 rounded-2xl bg-zinc-800 group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-all">
+                <div className="p-4 rounded-2xl bg-zinc-800 group-hover:bg-blue-600/20 group-hover:text-yellow-400 transition-all">
                   {reason.icon}
                 </div>
                 

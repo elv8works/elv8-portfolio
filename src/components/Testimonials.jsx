@@ -42,7 +42,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            Trusted by <span className="text-blue-500">Industry Leaders</span>
+            Trusted by <span className="text-yellow-500">Industry Leaders</span>
           </motion.h2>
           <p className="text-zinc-500 font-mono tracking-widest uppercase text-sm">
             Real Impact. Real Results.
@@ -59,13 +59,13 @@ export default function Testimonials() {
               transition={{ delay: index * 0.2 }}
               className={`relative p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br ${t.color} border border-zinc-800 bg-zinc-900/30 backdrop-blur-md flex flex-col justify-between group hover:border-blue-500/40 transition-all duration-500`}
             >
-              <Quote className="absolute top-8 right-8 text-zinc-800 group-hover:text-blue-500/20 transition-colors" size={60} />
+              <Quote className="absolute top-8 right-8 text-zinc-800 group-hover:text-yellow-500/20 transition-colors" size={60} />
               
               <div>
                 <div className="flex items-center gap-2 mb-6">
                   <div className="flex items-center gap-1.5 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full">
-                    <CheckCircle2 size={12} className="text-blue-400" />
-                    <span className="text-[10px] font-bold text-blue-400 uppercase tracking-wider">Verified Result</span>
+                    <CheckCircle2 size={12} className="text-yellow-400" />
+                    <span className="text-[10px] font-bold text-yellow-400 uppercase tracking-wider">Verified Result</span>
                   </div>
                 </div>
 

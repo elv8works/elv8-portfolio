@@ -62,7 +62,7 @@ export default function DemoWorks() {
     <section className="py-24 px-6 bg-zinc-950 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white uppercase tracking-tighter">Live Demo <span className="text-blue-500">Suite</span></h2>
+          <h2 className="text-4xl font-bold text-white uppercase tracking-tighter">Live Demo <span className="text-yellow-500">Suite</span></h2>
           <p className="text-zinc-500 mt-2 font-mono">Interact with our logic before we start your project.</p>
         </div>
 

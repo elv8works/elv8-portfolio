@@ -26,7 +26,7 @@ export default function ContentDemo() {
       {/* Header */}
       <header className="px-5 py-4 border-b border-zinc-800 bg-[#0d1117] flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Share2 size={16} className="text-blue-500" />
+          <Share2 size={16} className="text-yellow-500" />
           <h2 className="text-xs font-black text-white uppercase tracking-tighter">Content Studio</h2>
         </div>
         <div className="flex gap-2">
